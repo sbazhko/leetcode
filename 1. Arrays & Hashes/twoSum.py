@@ -5,7 +5,7 @@ class Solution:
     def twoSum(self, nums: List[int], target: int) -> List[int]:
         leftToSumUp = {}
         for idx, num in enumerate(nums):
-            if(num in leftToSumUp):
+            if num in leftToSumUp:
                 return [idx, leftToSumUp[num]]
             leftToSumUp[target - num] = idx
         return []
