@@ -21,7 +21,7 @@ class Solution:
                     k += 1
                 else:
                     triplets.append([nums[i], nums[j], nums[k]])
-                    k += 1  # [0, 1, 1, 2, 3]
+                    k += 1
                     while k < j and nums[k] == nums[k - 1]:
                         k += 1
             j = len(nums) - 1
@@ -35,6 +35,6 @@ s = Solution()
 print(s.threeSum([0, 0, 0]))
 print(s.threeSum([0, 0, 0, 0]))
 print(s.threeSum([0, 1, 1]))
-print(s.threeSum([-1, 0, 1, 2, -1, -4]))  # [-4, -1, -1, 0, 1, 2]
+print(s.threeSum([-1, 0, 1, 2, -1, -4]))
 print(s.threeSum([-2, 0, 1, 1, 2]))
 print(s.threeSum([-1, 0, 1, 2, -1, -4, -2, -3, 3, 0, 4]))
