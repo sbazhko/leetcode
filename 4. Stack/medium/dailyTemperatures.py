@@ -6,9 +6,9 @@ from typing import List
 class Solution:
     def dailyTemperatures(self, temperatures: List[int]) -> List[int]:
         # contains indexes of temperatures that are lesser than current temp
-        stack = [0]
+        stack = []
         result = [0] * len(temperatures)
-        for i in range(1, len(temperatures)):
+        for i in range(len(temperatures)):
             currTemp = temperatures[i]
             while len(stack) > 0 and temperatures[stack[len(stack) - 1]] < currTemp:
                 j = stack.pop()
