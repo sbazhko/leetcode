@@ -18,7 +18,15 @@ class Solution:
         return 1 + max(self.maxDepth(root.left), self.maxDepth(root.right))
 
     def maxDepthDFSIterative(self, root: Optional[TreeNode]) -> int:
-        return
+        depth = 0
+        stack = [[root, 1]]
+        while stack:
+            node, currDepth = stack.pop()
+            if node:
+                stack.append([node.left, currDepth + 1])
+                stack.append([node.right, currDepth + 1])
+                depth = max(depth, currDepth)
+        return depth
 
     def maxDepthBFS(self, root: Optional[TreeNode]) -> int:
         if not root:
