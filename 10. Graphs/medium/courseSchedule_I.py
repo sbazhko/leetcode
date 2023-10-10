@@ -9,7 +9,7 @@ class Solution:
         visited = set()
 
         def dfs(crs):
-            if crs in visited:
+            if crs in visijjted:
                 return False
             if prereqMap[crs] == []:
                 return True
